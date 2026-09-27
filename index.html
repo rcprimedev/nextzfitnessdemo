@@ -1,0 +1,2891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="NEXTZ FITNESS STUDIO - Transform your body, build your strength and become your strongest self.">
+<title>NEXTZ FITNESS STUDIO</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 65px;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #080808;
+    color: #fff;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+:root {
+    --primary: #ff3b1f;
+    --primary-dark: #d92d17;
+    --black: #080808;
+    --dark: #101010;
+    --dark-2: #161616;
+    --gray: #888;
+    --light-gray: #c8c8c8;
+    --border: rgba(255,255,255,.09);
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+section {
+    padding: 48px 5%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 27px;
+}
+
+.small-title {
+    color: var(--primary);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.section-heading h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 42px;
+    line-height: .9;
+}
+
+.section-heading p {
+    color: var(--gray);
+    font-size: 11px;
+    max-width: 500px;
+    margin: 10px auto 0;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    z-index: 9999;
+    transition: .3s;
+}
+
+.navbar.scrolled {
+    background: rgba(8,8,8,.96);
+    backdrop-filter: blur(12px);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1250px;
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.menu-btn {
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+.nav-links {
+    position: fixed;
+    top: 64px;
+    left: -100%;
+
+    width: 100%;
+    height: calc(100vh - 64px);
+
+    background: rgba(8,8,8,.98);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 35px;
+    gap: 22px;
+
+    list-style: none;
+
+    transition: .35s ease;
+}
+
+.nav-links.active {
+    left: 0;
+}
+
+.nav-links a {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-join {
+    background: var(--primary);
+    padding: 10px 20px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    padding: 95px 5% 55px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.62),
+            rgba(0,0,0,.9)
+        ),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=85")
+        center / cover no-repeat;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.hero-label {
+    color: var(--primary);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    margin-bottom: 11px;
+}
+
+.hero h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 64px;
+    line-height: .86;
+    letter-spacing: .5px;
+    margin-bottom: 17px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero p {
+    max-width: 500px;
+    color: #ccc;
+    font-size: 11px;
+    line-height: 1.7;
+    margin-bottom: 23px;
+}
+
+
+/* SMALL MOBILE BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+.btn {
+    min-height: 38px;
+
+    padding: 9px 14px;
+
+    border-radius: 3px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: .7px;
+    text-transform: uppercase;
+
+    border: 1px solid transparent;
+
+    transition: .3s;
+}
+
+.hero-buttons .btn {
+    width: auto;
+    min-width: 118px;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-outline {
+    border-color: rgba(255,255,255,.35);
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #111;
+}
+
+
+/* =========================================================
+   STATS - HORIZONTAL SCROLL
+========================================================= */
+
+.stats {
+    padding: 0;
+    background: var(--primary);
+    overflow: hidden;
+}
+
+.stats-grid {
+    display: flex;
+
+    width: max-content;
+
+    gap: 0;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.stats-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.stat {
+    width: 135px;
+    min-width: 135px;
+
+    padding: 19px 8px;
+
+    text-align: center;
+
+    border-right: 1px solid rgba(0,0,0,.12);
+}
+
+.stat h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 31px;
+    line-height: 1;
+}
+
+.stat p {
+    margin-top: 4px;
+
+    font-size: 7px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: .7px;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+    background: var(--black);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 27px;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    height: 290px;
+    object-fit: cover;
+}
+
+.experience {
+    position: absolute;
+
+    right: 9px;
+    bottom: 9px;
+
+    width: 82px;
+    height: 82px;
+
+    background: var(--primary);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.experience strong {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 29px;
+    line-height: 1;
+}
+
+.experience span {
+    font-size: 6px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.about-content .tag {
+    color: var(--primary);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.about-content h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 45px;
+    line-height: .88;
+    margin: 8px 0 15px;
+}
+
+.about-content h2 span {
+    color: var(--primary);
+}
+
+.about-content p {
+    color: var(--gray);
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.about-list {
+    list-style: none;
+    margin: 17px 0 20px;
+}
+
+.about-list li {
+    color: #ddd;
+    font-size: 10px;
+    padding: 5px 0;
+}
+
+.about-list li::before {
+    content: "✓";
+    color: var(--primary);
+    margin-right: 8px;
+}
+
+
+/* =========================================================
+   PROGRAMS - COMPACT MOBILE
+========================================================= */
+
+.services {
+    background: #0c0c0c;
+}
+
+.service-grid {
+    display: flex;
+
+    gap: 10px;
+
+    overflow-x: auto;
+
+    padding-bottom: 7px;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.service-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.service-card {
+    position: relative;
+
+    min-width: 190px;
+    width: 190px;
+
+    height: 230px;
+
+    overflow: hidden;
+
+    background: var(--dark-2);
+
+    flex-shrink: 0;
+}
+
+.service-card img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.service-card::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.95),
+            rgba(0,0,0,.1)
+        );
+}
+
+.service-content {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 13px;
+    right: 13px;
+    bottom: 14px;
+}
+
+.service-number {
+    color: var(--primary);
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.service-content h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    line-height: 1;
+    margin: 3px 0;
+}
+
+.service-content p {
+    color: #ccc;
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   MEMBERSHIP - ONE CARD PER SWIPE
+========================================================= */
+
+.pricing {
+    background: var(--black);
+}
+
+.pricing-grid {
+    display: flex;
+
+    gap: 14px;
+
+    overflow-x: auto;
+
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+
+    padding: 3px 5px 12px;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.pricing-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.price-card {
+    position: relative;
+
+    min-width: 86%;
+
+    padding: 27px 21px;
+
+    background: #141414;
+
+    border: 1px solid var(--border);
+
+    scroll-snap-align: center;
+
+    flex-shrink: 0;
+}
+
+.price-card.featured {
+    border-color: var(--primary);
+}
+
+.popular {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    padding: 6px 9px;
+
+    background: var(--primary);
+
+    font-size: 7px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+}
+
+.price-card h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 31px;
+}
+
+.price {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 48px;
+    margin: 9px 0 15px;
+}
+
+.price span {
+    font-family: "Inter", sans-serif;
+    color: var(--gray);
+    font-size: 9px;
+}
+
+.price-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.price-list li {
+    color: #bbb;
+    font-size: 10px;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.price-list li::before {
+    content: "✓";
+    color: var(--primary);
+    margin-right: 8px;
+}
+
+
+/* =========================================================
+   TRAINERS - COMPACT MOBILE
+========================================================= */
+
+.trainers {
+    background: #0c0c0c;
+}
+
+.trainer-grid {
+    display: flex;
+
+    gap: 10px;
+
+    overflow-x: auto;
+
+    padding-bottom: 7px;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.trainer-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.trainer-card {
+    min-width: 175px;
+    width: 175px;
+
+    background: #141414;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+.trainer-image img {
+    height: 225px;
+    object-fit: cover;
+}
+
+.trainer-info {
+    padding: 12px;
+}
+
+.trainer-info h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.trainer-info p {
+    color: var(--primary);
+    font-size: 7px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+
+/* =========================================================
+   BMI
+========================================================= */
+
+.bmi-section {
+    background:
+        linear-gradient(
+            rgba(0,0,0,.88),
+            rgba(0,0,0,.94)
+        ),
+        url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1600&q=85")
+        center / cover no-repeat;
+}
+
+.bmi-box {
+    max-width: 650px;
+    margin: auto;
+    text-align: center;
+}
+
+.bmi-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 7px;
+}
+
+.bmi-form input {
+    width: 100%;
+
+    padding: 11px;
+
+    background: rgba(255,255,255,.08);
+
+    border: 1px solid rgba(255,255,255,.14);
+
+    color: white;
+
+    outline: none;
+
+    border-radius: 2px;
+
+    font-size: 10px;
+}
+
+.bmi-result {
+    margin-top: 18px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TESTIMONIALS
+========================================================= */
+
+.testimonials {
+    background: var(--black);
+}
+
+.testimonial-grid {
+    display: flex;
+
+    gap: 10px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+    padding-bottom: 7px;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.testimonial-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonial {
+    min-width: 82%;
+
+    background: #141414;
+
+    padding: 19px;
+
+    border: 1px solid var(--border);
+
+    flex-shrink: 0;
+}
+
+.stars {
+    color: var(--primary);
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.testimonial > p {
+    color: #bbb;
+    font-size: 10px;
+    margin-bottom: 15px;
+}
+
+.client {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.client-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.client-avatar img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.client h4 {
+    font-size: 10px;
+}
+
+.client span {
+    color: var(--gray);
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq {
+    background: #0c0c0c;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-question {
+    width: 100%;
+
+    padding: 15px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    background: none;
+    border: none;
+
+    color: white;
+
+    text-align: left;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.faq-question span {
+    color: var(--primary);
+    font-size: 18px;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: .35s;
+}
+
+.faq-answer p {
+    color: var(--gray);
+    font-size: 10px;
+    padding-bottom: 15px;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 150px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+    background: var(--black);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+
+.contact-info h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 48px;
+    line-height: .88;
+    margin-bottom: 14px;
+}
+
+.contact-info h2 span {
+    color: var(--primary);
+}
+
+.contact-info > p {
+    color: var(--gray);
+    font-size: 10px;
+    margin-bottom: 22px;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.contact-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary);
+
+    font-size: 14px;
+
+    flex-shrink: 0;
+}
+
+.contact-detail h4 {
+    font-size: 10px;
+}
+
+.contact-detail p {
+    color: var(--gray);
+    font-size: 9px;
+}
+
+.contact-form {
+    background: #141414;
+    padding: 19px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+
+    color: #aaa;
+
+    font-size: 7px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    padding: 11px;
+
+    background: #0d0d0d;
+
+    color: white;
+
+    border: 1px solid var(--border);
+
+    outline: none;
+
+    border-radius: 2px;
+
+    font-size: 10px;
+}
+
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta {
+    padding: 48px 5%;
+    text-align: center;
+    background: var(--primary);
+}
+
+.cta h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 47px;
+    line-height: .9;
+    margin-bottom: 13px;
+}
+
+.cta p {
+    max-width: 500px;
+    margin: auto auto 18px;
+    color: rgba(0,0,0,.75);
+    font-size: 10px;
+}
+
+.cta .btn {
+    background: #080808;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #050505;
+    padding: 38px 5% 17px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 15px;
+}
+
+.footer-column:first-child {
+    grid-column: 1 / -1;
+}
+
+.footer-logo {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 31px;
+}
+
+.footer-logo span {
+    color: var(--primary);
+}
+
+.footer-column > p {
+    color: var(--gray);
+    max-width: 400px;
+    margin-top: 7px;
+    font-size: 9px;
+}
+
+.footer-column h4 {
+    font-size: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 11px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 6px;
+}
+
+.footer-column a {
+    color: var(--gray);
+    font-size: 8px;
+}
+
+.copyright {
+    border-top: 1px solid var(--border);
+    margin-top: 27px;
+    padding-top: 14px;
+    color: #555;
+    font-size: 7px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 600px) {
+
+    section {
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: 82px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .stats-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        overflow: hidden;
+    }
+
+    .stat {
+        width: auto;
+        min-width: 0;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .about-image img {
+        height: 400px;
+    }
+
+    .service-grid,
+    .trainer-grid {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        overflow: visible;
+    }
+
+    .service-card {
+        min-width: 0;
+        width: auto;
+        height: 280px;
+    }
+
+    .trainer-card {
+        min-width: 0;
+        width: auto;
+    }
+
+    .trainer-image img {
+        height: 330px;
+    }
+
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        overflow: visible;
+        scroll-snap-type: none;
+    }
+
+    .price-card {
+        min-width: 0;
+    }
+
+    .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        overflow: visible;
+    }
+
+    .testimonial {
+        min-width: 0;
+    }
+
+    .bmi-form {
+        grid-template-columns: 1fr 1fr auto;
+    }
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 900px) {
+
+    section {
+        padding: 95px 7%;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .nav-links {
+        position: static;
+
+        width: auto;
+        height: auto;
+
+        padding: 0;
+
+        background: transparent;
+
+        flex-direction: row;
+
+        gap: 26px;
+
+        overflow: visible;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .hero {
+        padding-left: 7%;
+    }
+
+    .hero h1 {
+        font-size: 115px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-buttons .btn {
+        min-width: 150px;
+    }
+
+    .about-image img {
+        height: 520px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .service-card {
+        height: 330px;
+    }
+
+    .trainer-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .trainer-image img {
+        height: 390px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(3,1fr);
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .price-card {
+        min-width: 0;
+    }
+
+    .price-card.featured {
+        transform: scale(1.04);
+    }
+
+    .testimonial-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: .8fr 1.2fr;
+        gap: 60px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    }
+
+    .footer-column:first-child {
+        grid-column: auto;
+    }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+    .hero h1 {
+        font-size: 125px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 350px) {
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-buttons {
+        gap: 5px;
+    }
+
+    .hero-buttons .btn {
+        min-width: 105px;
+        padding-left: 9px;
+        padding-right: 9px;
+        font-size: 8px;
+    }
+
+    .section-heading h2 {
+        font-size: 37px;
+    }
+
+    .service-card {
+        min-width: 175px;
+        width: 175px;
+        height: 215px;
+    }
+
+    .price-card {
+        min-width: 90%;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header class="navbar" id="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+            NEXTZ <span>FITNESS</span>
+        </a>
+
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+        <nav>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Programs</a></li>
+                <li><a href="#pricing">Membership</a></li>
+                <li><a href="#trainers">Trainers</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+                <li>
+                    <a href="#contact" class="nav-join">
+                        Join Now
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content reveal">
+
+        <div class="hero-label">
+            NEXTZ FITNESS STUDIO
+        </div>
+
+        <h1>
+            BUILD YOUR
+            <span>STRONGEST</span>
+            SELF
+        </h1>
+
+        <p>
+            Transform your body, build your strength and become
+            the best version of yourself with professional training
+            and powerful workouts.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#pricing" class="btn btn-primary">
+                Start Training
+            </a>
+
+            <a href="#services" class="btn btn-outline">
+                Explore Programs
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     STATS - SWIPE ON MOBILE
+========================================================= -->
+
+<section class="stats">
+
+    <div class="stats-grid">
+
+        <div class="stat">
+            <h3 data-target="2500">0</h3>
+            <p>Active Members</p>
+        </div>
+
+        <div class="stat">
+            <h3 data-target="18">0</h3>
+            <p>Expert Trainers</p>
+        </div>
+
+        <div class="stat">
+            <h3 data-target="12">0</h3>
+            <p>Years Experience</p>
+        </div>
+
+        <div class="stat">
+            <h3 data-target="35">0</h3>
+            <p>Weekly Classes</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image reveal">
+
+                <img
+                    src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1200&q=85"
+                    alt="NEXTZ Fitness"
+                >
+
+                <div class="experience">
+
+                    <strong>12+</strong>
+
+                    <span>
+                        Years Of Excellence
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-content reveal">
+
+                <div class="tag">
+                    About NEXTZ
+                </div>
+
+                <h2>
+                    WHERE
+                    <span>CHAMPIONS</span>
+                    ARE MADE
+                </h2>
+
+                <p>
+                    NEXTZ FITNESS STUDIO is more than a gym.
+                    It is a place where discipline, strength and
+                    consistency come together.
+                </p>
+
+                <p>
+                    Whether your goal is building muscle, losing
+                    weight or improving fitness, our programs help
+                    you move forward.
+                </p>
+
+                <ul class="about-list">
+
+                    <li>Quality strength & cardio equipment</li>
+                    <li>Experienced fitness trainers</li>
+                    <li>Personalized workout programs</li>
+                    <li>Supportive fitness environment</li>
+
+                </ul>
+
+                <a href="#contact" class="btn btn-primary">
+                    Get Started
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROGRAMS
+     MOBILE: SIDE SCROLL
+========================================================= -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="small-title">
+                Our Programs
+            </div>
+
+            <h2>
+                TRAIN WITH PURPOSE
+            </h2>
+
+            <p>
+                Choose a program that matches your fitness goals.
+                Swipe to explore.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+
+            <div class="service-card reveal">
+
+                <img
+                    src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=80"
+                    alt="Strength Training"
+                >
+
+                <div class="service-content">
+
+                    <div class="service-number">01</div>
+
+                    <h3>Strength Training</h3>
+
+                    <p>
+                        Build strength, muscle and power.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-card reveal">
+
+                <img
+                    src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=900&q=80"
+                    alt="Cardio"
+                >
+
+                <div class="service-content">
+
+                    <div class="service-number">02</div>
+
+                    <h3>Cardio</h3>
+
+                    <p>
+                        Improve endurance and burn calories.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-card reveal">
+
+                <img
+                    src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=900&q=80"
+                    alt="Yoga"
+                >
+
+                <div class="service-content">
+
+                    <div class="service-number">03</div>
+
+                    <h3>Yoga & Mobility</h3>
+
+                    <p>
+                        Improve flexibility and movement.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-card reveal">
+
+                <img
+                    src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80"
+                    alt="Personal Training"
+                >
+
+                <div class="service-content">
+
+                    <div class="service-number">04</div>
+
+                    <h3>Personal Training</h3>
+
+                    <p>
+                        One-on-one coaching.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-card reveal">
+
+                <img
+                    src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=900&q=80"
+                    alt="Functional Fitness"
+                >
+
+                <div class="service-content">
+
+                    <div class="service-number">05</div>
+
+                    <h3>Functional Fitness</h3>
+
+                    <p>
+                        Improve movement and performance.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-card reveal">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80"
+                    alt="Group Classes"
+                >
+
+                <div class="service-content">
+
+                    <div class="service-number">06</div>
+
+                    <h3>Group Classes</h3>
+
+                    <p>
+                        High-energy community workouts.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MEMBERSHIP
+     MOBILE: ONE CARD PER SIDE SWIPE
+========================================================= -->
+
+<section class="pricing" id="pricing">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="small-title">
+                Membership
+            </div>
+
+            <h2>
+                CHOOSE YOUR PLAN
+            </h2>
+
+            <p>
+                Swipe left or right to compare plans.
+            </p>
+
+        </div>
+
+
+        <div class="pricing-grid">
+
+
+            <div class="price-card reveal">
+
+                <h3>BASIC</h3>
+
+                <div class="price">
+                    ₹999
+                    <span>/month</span>
+                </div>
+
+                <ul class="price-list">
+                    <li>Gym access</li>
+                    <li>Cardio equipment</li>
+                    <li>Locker access</li>
+                    <li>Fitness assessment</li>
+                    <li>Workout tracking</li>
+                </ul>
+
+                <a href="#contact" class="btn btn-outline">
+                    Choose Plan
+                </a>
+
+            </div>
+
+
+            <div class="price-card featured reveal">
+
+                <div class="popular">
+                    Most Popular
+                </div>
+
+                <h3>PRO</h3>
+
+                <div class="price">
+                    ₹1,999
+                    <span>/month</span>
+                </div>
+
+                <ul class="price-list">
+                    <li>Everything in Basic</li>
+                    <li>Unlimited group classes</li>
+                    <li>Trainer session</li>
+                    <li>Nutrition guidance</li>
+                    <li>Progress tracking</li>
+                </ul>
+
+                <a href="#contact" class="btn btn-primary">
+                    Choose Plan
+                </a>
+
+            </div>
+
+
+            <div class="price-card reveal">
+
+                <h3>ELITE</h3>
+
+                <div class="price">
+                    ₹3,999
+                    <span>/month</span>
+                </div>
+
+                <ul class="price-list">
+                    <li>Everything in Pro</li>
+                    <li>Personal trainer</li>
+                    <li>Custom meal plan</li>
+                    <li>Weekly progress analysis</li>
+                    <li>Priority support</li>
+                </ul>
+
+                <a href="#contact" class="btn btn-outline">
+                    Choose Plan
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TRAINERS
+     MOBILE: COMPACT SIDE SCROLL
+========================================================= -->
+
+<section class="trainers" id="trainers">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="small-title">
+                Our Team
+            </div>
+
+            <h2>
+                MEET THE EXPERTS
+            </h2>
+
+            <p>
+                Experienced trainers helping you become stronger.
+            </p>
+
+        </div>
+
+
+        <div class="trainer-grid">
+
+
+            <div class="trainer-card reveal">
+
+                <div class="trainer-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=85"
+                        alt="Trainer"
+                    >
+
+                </div>
+
+                <div class="trainer-info">
+
+                    <h3>
+                        Expert 1
+                    </h3>
+
+                    <p>
+                        Strength Coach
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="trainer-card reveal">
+
+                <div class="trainer-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=900&q=85"
+                        alt="Trainer"
+                    >
+
+                </div>
+
+                <div class="trainer-info">
+
+                    <h3>
+                        Expert 2
+                    </h3>
+
+                    <p>
+                        Personal Trainer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="trainer-card reveal">
+
+                <div class="trainer-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=85"
+                        alt="Trainer"
+                    >
+
+                </div>
+
+                <div class="trainer-info">
+
+                    <h3>
+                        Expert 3
+                    </h3>
+
+                    <p>
+                        Performance Coach
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     BMI
+========================================================= -->
+
+<section class="bmi-section">
+
+    <div class="bmi-box reveal">
+
+        <div class="section-heading">
+
+            <div class="small-title">
+                Fitness Calculator
+            </div>
+
+            <h2>
+                CHECK YOUR BMI
+            </h2>
+
+            <p>
+                Enter your height and weight.
+            </p>
+
+        </div>
+
+        <div class="bmi-form">
+
+            <input
+                type="number"
+                id="height"
+                placeholder="Height (cm)"
+                inputmode="decimal"
+            >
+
+            <input
+                type="number"
+                id="weight"
+                placeholder="Weight (kg)"
+                inputmode="decimal"
+            >
+
+            <button
+                class="btn btn-primary"
+                onclick="calculateBMI()"
+            >
+                Calculate
+            </button>
+
+        </div>
+
+        <div
+            class="bmi-result"
+            id="bmiResult"
+        ></div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TESTIMONIALS
+========================================================= -->
+
+<section class="testimonials">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="small-title">
+                Success Stories
+            </div>
+
+            <h2>
+                WHAT MEMBERS SAY
+            </h2>
+
+        </div>
+
+
+        <div class="testimonial-grid">
+
+
+            <div class="testimonial reveal">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "NEXTZ helped me become much more consistent
+                    with my workouts. The environment is motivating."
+                </p>
+
+                <div class="client">
+
+                    <div class="client-avatar">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80"
+                            alt="Member"
+                        >
+
+                    </div>
+
+                    <div>
+                        <h4>Emily Johnson</h4>
+                        <span>NEXTZ Member</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="testimonial reveal">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "The training programs gave me the structure
+                    I needed. I feel stronger every month."
+                </p>
+
+                <div class="client">
+
+                    <div class="client-avatar">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"
+                            alt="Member"
+                        >
+
+                    </div>
+
+                    <div>
+                        <h4>Michael Brown</h4>
+                        <span>NEXTZ Member</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="testimonial reveal">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Great equipment, friendly atmosphere and
+                    trainers who care about your progress."
+                </p>
+
+                <div class="client">
+
+                    <div class="client-avatar">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+                            alt="Member"
+                        >
+
+                    </div>
+
+                    <div>
+                        <h4>Jessica Lee</h4>
+                        <span>NEXTZ Member</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FAQ
+========================================================= -->
+
+<section class="faq">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="small-title">
+                FAQ
+            </div>
+
+            <h2>
+                COMMON QUESTIONS
+            </h2>
+
+        </div>
+
+
+        <div class="faq-container">
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Do you offer a free trial?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Contact NEXTZ FITNESS STUDIO to ask about
+                        current trial and introductory offers.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Do beginners need gym experience?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        No. Beginners can start with suitable
+                        workouts and trainer guidance.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Do you provide personal training?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. Personal training is available with
+                        selected membership options.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Can I contact the gym before joining?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. Use the contact form below to send
+                        your enquiry.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+
+            <div class="contact-info reveal">
+
+                <div class="small-title">
+                    Get In Touch
+                </div>
+
+                <h2>
+                    START YOUR
+                    <span>JOURNEY</span>
+                </h2>
+
+                <p>
+                    Ready to take your fitness to the next level?
+                    Contact NEXTZ FITNESS STUDIO today.
+                </p>
+
+
+                <div class="contact-detail">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <div>
+                        <h4>Location</h4>
+                        <p>Your Gym Address</p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <div class="contact-icon">
+                        📞
+                    </div>
+
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+91 XXXXX XXXXX</p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <div class="contact-icon">
+                        ✉
+                    </div>
+
+                    <div>
+                        <h4>Email</h4>
+                        <p>your@email.com</p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <div class="contact-icon">
+                        ⏰
+                    </div>
+
+                    <div>
+                        <h4>Opening Hours</h4>
+                        <p>Monday - Sunday</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <form
+                class="contact-form reveal"
+                id="contactForm"
+            >
+
+                <div class="form-group">
+
+                    <label>Full Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Phone</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="+91 XXXXX XXXXX"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Interested In</label>
+
+                    <select id="plan">
+
+                        <option value="">
+                            Select an option
+                        </option>
+
+                        <option>
+                            Basic Membership
+                        </option>
+
+                        <option>
+                            Pro Membership
+                        </option>
+
+                        <option>
+                            Elite Membership
+                        </option>
+
+                        <option>
+                            Personal Training
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Message</label>
+
+                    <textarea
+                        id="message"
+                        placeholder="Tell us about your fitness goals..."
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Join now
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta">
+
+    <h2>
+        YOUR NEXT LEVEL
+        STARTS NOW
+    </h2>
+
+    <p>
+        Stop waiting. Start training.
+        Build a stronger and healthier version of yourself.
+    </p>
+
+    <a href="#contact" class="btn">
+        Join NEXTZ
+    </a>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div class="footer-column">
+
+            <div class="footer-logo">
+                NEXTZ <span>FITNESS</span>
+            </div>
+
+            <p>
+                NEXTZ FITNESS STUDIO —
+                train hard, stay consistent and become your next level.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Quick Links</h4>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Programs</a></li>
+                <li><a href="#pricing">Membership</a></li>
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Programs</h4>
+
+            <ul>
+                <li><a href="#services">Strength Training</a></li>
+                <li><a href="#services">Cardio</a></li>
+                <li><a href="#services">Personal Training</a></li>
+                <li><a href="#services">Group Classes</a></li>
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Follow Us</h4>
+
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">YouTube</a></li>
+                <li><a href="#">WhatsApp</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © <span id="year"></span>
+        NEXTZ FITNESS STUDIO.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+const navbar =
+    document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+
+    navbar.classList.toggle(
+        "scrolled",
+        window.scrollY > 30
+    );
+
+});
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const navLinks =
+    document.getElementById("navLinks");
+
+
+menuBtn.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+
+    menuBtn.textContent =
+        navLinks.classList.contains("active")
+            ? "✕"
+            : "☰";
+
+});
+
+
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("active");
+
+            menuBtn.textContent = "☰";
+
+        });
+
+    });
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+const revealObserver =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                    revealObserver.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold: .08
+        }
+    );
+
+
+revealElements.forEach(element => {
+
+    revealObserver.observe(element);
+
+});
+
+
+/* =========================================================
+   STATS COUNTER
+========================================================= */
+
+const counters =
+    document.querySelectorAll("[data-target]");
+
+let counterStarted = false;
+
+
+const counterObserver =
+    new IntersectionObserver(
+        entries => {
+
+            if (
+                entries[0].isIntersecting &&
+                !counterStarted
+            ) {
+
+                counterStarted = true;
+
+                counters.forEach(counter => {
+
+                    const target =
+                        Number(counter.dataset.target);
+
+                    let current = 0;
+
+                    const increment =
+                        Math.max(
+                            1,
+                            Math.ceil(target / 50)
+                        );
+
+
+                    function update() {
+
+                        current += increment;
+
+                        if (current >= target) {
+
+                            counter.textContent =
+                                target.toLocaleString() + "+";
+
+                            return;
+
+                        }
+
+                        counter.textContent =
+                            current.toLocaleString();
+
+                        requestAnimationFrame(update);
+
+                    }
+
+                    update();
+
+                });
+
+            }
+
+        },
+        {
+            threshold: .5
+        }
+    );
+
+
+if (counters.length) {
+
+    counterObserver.observe(counters[0]);
+
+}
+
+
+/* =========================================================
+   BMI
+========================================================= */
+
+function calculateBMI() {
+
+    const height =
+        parseFloat(
+            document.getElementById("height").value
+        );
+
+    const weight =
+        parseFloat(
+            document.getElementById("weight").value
+        );
+
+    const result =
+        document.getElementById("bmiResult");
+
+
+    if (
+        !height ||
+        !weight ||
+        height <= 0 ||
+        weight <= 0
+    ) {
+
+        result.textContent =
+            "Please enter valid height and weight.";
+
+        result.style.color =
+            "#ff3b1f";
+
+        return;
+
+    }
+
+
+    const meters =
+        height / 100;
+
+    const bmi =
+        weight / (meters * meters);
+
+
+    let category;
+
+
+    if (bmi < 18.5) {
+
+        category = "Underweight";
+
+    } else if (bmi < 25) {
+
+        category = "Healthy Weight";
+
+    } else if (bmi < 30) {
+
+        category = "Overweight";
+
+    } else {
+
+        category = "Obesity";
+
+    }
+
+
+    result.innerHTML =
+        `Your BMI is <strong>${bmi.toFixed(1)}</strong> — ${category}`;
+
+    result.style.color = "#fff";
+
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+const faqItems =
+    document.querySelectorAll(".faq-item");
+
+
+faqItems.forEach(item => {
+
+    const question =
+        item.querySelector(".faq-question");
+
+
+    question.addEventListener("click", () => {
+
+        const active =
+            item.classList.contains("active");
+
+
+        faqItems.forEach(other => {
+
+            other.classList.remove("active");
+
+            other
+                .querySelector(".faq-question span")
+                .textContent = "+";
+
+        });
+
+
+        if (!active) {
+
+            item.classList.add("active");
+
+            item
+                .querySelector(".faq-question span")
+                .textContent = "−";
+
+        }
+
+    });
+
+});
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+const contactForm =
+    document.getElementById("contactForm");
+
+
+contactForm.addEventListener(
+    "submit",
+    event => {
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("name").value;
+
+        alert(
+            `Thank you ${name}! Your enquiry has been received by NEXTZ FITNESS STUDIO.`
+        );
+
+        contactForm.reset();
+
+    }
+);
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
